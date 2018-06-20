@@ -38,7 +38,7 @@ config.pathToSDL = ""
 -- Example: "/home/user/sdl_panasonic/src/components/interfaces"
 config.pathToSDLInterfaces = ""
 --- Define SDL modification
-config.SDL = "smartDeviceLinkCore"
+config.SDL = "SmartDeviceLink"
 --- Definehost for SDL logs
 config.sdl_logs_host = "localhost"
 --- Define port for SDL logs

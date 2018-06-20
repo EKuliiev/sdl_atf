@@ -97,11 +97,11 @@ end
 
 --- Launch SDL from ATF
 -- @tparam string pathToSDL Path to SDL
--- @tparam string smartDeviceLinkCore The name of the SDL to run
+-- @tparam string SmartDeviceLink The name of the SDL to run
 -- @tparam boolean ExitOnCrash Flag whether Stop ATF in case SDL shutdown
 -- @treturn boolean The main result. Indicates whether the launch of SDL was successful
 -- @treturn string Additional information on the main SDL startup result
-function SDL:StartSDL(pathToSDL, smartDeviceLinkCore, ExitOnCrash)
+function SDL:StartSDL(pathToSDL, SmartDeviceLink, ExitOnCrash)
   if ExitOnCrash ~= nil then
     self.exitOnCrash = ExitOnCrash
   end
@@ -114,7 +114,7 @@ function SDL:StartSDL(pathToSDL, smartDeviceLinkCore, ExitOnCrash)
     return false, msg
   end
 
-  local result = os.execute ('./tools/StartSDL.sh ' .. pathToSDL .. ' ' .. smartDeviceLinkCore)
+  local result = os.execute ('./tools/StartSDL.sh ' .. pathToSDL .. ' ' .. SmartDeviceLink)
 
   local msg
   if result then

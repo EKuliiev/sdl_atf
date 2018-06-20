@@ -66,8 +66,8 @@ end
 -- Checks: SDL Core binary, HMI and MObile API files
 -- Stop ATF execution in case any error
 local function check_required_fields()
-  if (not is_file_exists(config.pathToSDL.."smartDeviceLinkCore"))
-     and (not is_file_exists(config.pathToSDL.."/smartDeviceLinkCore")) then
+  if (not is_file_exists(config.pathToSDL.."SmartDeviceLink"))
+     and (not is_file_exists(config.pathToSDL.."/SmartDeviceLink")) then
     print("ERROR: SDL is not accessible at the specified path: "..config.pathToSDL)
     os.exit(1)
   end
